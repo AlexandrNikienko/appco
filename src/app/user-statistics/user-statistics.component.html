@@ -1,0 +1,37 @@
+<div class="inner-wrapper">
+    <div class="user-statistics">
+        <div class="breadcrambs"></div>
+
+        <div class="page-title">Users statistics</div>
+
+        <div class="table-wrapper">
+            <table class="table" *ngIf="userStatistics$ | async as userStatistics">
+                <thead class="table__head">
+                    <tr class="table__row">
+                        <th class="table__cell">Id</th>
+                        <th class="table__cell">First name</th>
+                        <th class="table__cell">Last name</th>
+                        <th class="table__cell">Email</th>
+                        <th class="table__cell">Gender</th>
+                        <th class="table__cell">IP address</th>
+                        <th class="table__cell">Total clicks</th>
+                        <th class="table__cell">Total page views</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+                    <tr [routerLink]="['/user', user.id]" class="table__row" *ngFor="let user of userStatistics">
+                        <td class="table__cell">{{user.id}}</td>
+                        <td class="table__cell">{{user.firstName}}</td>
+                        <td class="table__cell">{{user.lastName}}</td>
+                        <td class="table__cell">{{user.email}}</td>
+                        <td class="table__cell">{{user.gender}}</td>
+                        <td class="table__cell">{{user.totalClicks}}</td>
+                        <td class="table__cell">{{user.totalPageViews}}</td>
+                        <td class="table__cell">{{user.ipAddress}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

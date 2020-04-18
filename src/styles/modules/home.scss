@@ -1,0 +1,46 @@
+.hero {
+    height: 583px;
+    color: $white;
+
+    &__content {
+        flex: 0 1 50%;
+        padding-top: 49px;
+        margin-right: 9%;
+
+        @include mobile {
+            flex-grow: 1;
+        }
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 1.23;
+        margin-bottom: 24px;
+
+        @include mobile {
+            font-size: 38px;
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 142%;
+        margin-bottom: 32px;
+    }
+
+    &__image {
+        flex: 0 0 321px;
+        height: 561px;
+        background: url('#{$imageFolder}/mobile.png') no-repeat center / cover;
+        margin-right: 10%;
+
+        @include mobile {
+            display: none;
+        }
+    }
+    
+    .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}

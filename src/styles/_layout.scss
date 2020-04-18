@@ -1,0 +1,111 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $white;
+    background: url('#{$imageFolder}/Rectangle8.svg') no-repeat top center / cover;
+
+    @include desktopLarge {
+        background-size: 100%;
+    }
+}
+
+.inner-wrapper {
+    max-width: $desktopLargeWidth;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.header {
+    flex: 0 0 $headerHeight;
+    background-color: $headerBgColor;
+    color: $white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.footer {
+    margin-top: auto;
+    flex: 0 0 $footerHeight;
+    background-color: $footerBgColor;
+    color: $white;
+    display: flex;
+
+    &__logo {
+        font-size: 24px;
+        line-height: 1.2;
+        width: 25%;
+    }
+
+    &__rights,
+    &__copy {
+        font-size: 1rem;
+        line-height: 1.4375;
+    }
+
+    &__copy {
+        text-align: right;
+        width: 25%;
+    }
+
+    .inner-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        padding: 10px 0;
+
+        &__rights,
+        &__logo,
+        &__copy {
+            text-align: center;
+            width: 100%;
+            padding: 5px;
+        }
+    }
+}
+
+.page-title {
+    color: $darkGrey;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    height: 56px;
+    width: 220px;
+    background-color: $themeColor;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+
+    &--light {
+        background-color: $white;
+        color: $themeColor;
+    }
+}
