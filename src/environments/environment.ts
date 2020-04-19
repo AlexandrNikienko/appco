@@ -18,3 +18,7 @@ export const environment = {
 export const USERSTATISTICS = {
   getItems: './assets/mocks/statistics.json'
 };
+
+export const USERSTATISTICS_PAGE5 = {
+  getItems: './assets/mocks/statistics-page5.json'
+};

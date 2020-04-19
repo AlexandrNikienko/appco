@@ -41,5 +41,35 @@
                 </tbody>
             </table>
         </div>
+
+        <ul *ngIf="totalPages" class="pagination">
+            <li [ngClass]="{disabled:currentPage === 1}">
+                <a (click)="setPage(1)">First</a>
+            </li>
+
+            <li [ngClass]="{disabled:currentPage === 1}">
+                <a (click)="setPage(currentPage - 1)">Previous</a>
+            </li>
+
+            <li *ngFor="let page of pages" [ngClass]="{active:currentPage === page}">
+                <a (click)="setPage(page)">{{page}}</a>
+            </li>
+
+            <li *ngIf="(totalPages - startPage) > 5 ">
+                <a (click)="setPage(startPage + 5)">...</a>
+            </li>
+
+             <li *ngIf="(totalPages - startPage) > 5" >
+                <a (click)="setPage(totalPages)">{{totalPages}}</a>
+            </li>
+
+            <li [ngClass]="{disabled:currentPage === totalPages}">
+                <a (click)="setPage(currentPage + 1)">Next</a>
+            </li>
+
+            <li [ngClass]="{disabled:currentPage === totalPages}">
+                <a (click)="setPage(totalPages)">Last</a>
+            </li>
+        </ul>
     </div>
 </div>
