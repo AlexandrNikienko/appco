@@ -13,11 +13,10 @@ export class AppComponent {
   constructor(private router: Router) {
     router.events
       .pipe(
-        filter(e => e instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
-        //this.isHomePage = event.url === "/";
-        event.url === "/" ? document.body.classList.add('home-page') : document.body.classList.remove('home-page');
-      }
+        filter(e => e instanceof NavigationEnd)
       )
+      .subscribe((event: NavigationEnd) => {
+        event.url === "/" ? document.body.classList.add('home-page') : document.body.classList.remove('home-page');
+      })
   }
 }

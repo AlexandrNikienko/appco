@@ -13,8 +13,8 @@
 
         <div class="page-title">Users statistics</div>
 
-        <div class="table-wrapper">
-            <table class="table" *ngIf="userStatistics$ | async as userStatistics">
+        <div class="table-wrapper" *ngIf="userStatistics$ | async as userStatistics">
+            <table class="table">
                 <thead class="table__head">
                     <tr class="table__row">
                         <th class="table__cell">Id</th>
@@ -41,6 +41,5 @@
                 </tbody>
             </table>
         </div>
-        
     </div>
 </div>

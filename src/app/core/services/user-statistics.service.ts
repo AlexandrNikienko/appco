@@ -9,13 +9,13 @@ import { UserStatistic } from '../models/userstatistic.model';
 export class UserStatisticsService {
   USERSTATISTICS$ = this.http.get<UserStatistic[]>(USERSTATISTICS.getItems)
     .pipe(
-        map(obj => this.getContent(obj))
+      map(obj => this.getContent(obj))
     );
 
-    constructor(private http: HttpClient) {
-    }
+  constructor(private http: HttpClient) {
+  }
 
-    getContent(obj: any): UserStatistic[] {
-      return obj.content;
+  getContent(obj: any): UserStatistic[] {
+    return obj.content;
   }
 }

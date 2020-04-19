@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
 })
 
 export class HomeComponent implements OnInit {
-    constructor(private title: Title) {}
+    constructor(private title: Title) { }
 
     ngOnInit() {
         this.title.setTitle('AppCo Home Page');

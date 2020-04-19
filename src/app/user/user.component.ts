@@ -16,8 +16,8 @@ export class UserComponent implements OnInit {
     public usersStatistics$ = this.userStatisticsService.USERSTATISTICS$;
 
     constructor(private route: ActivatedRoute,
-                private userStatisticsService: UserStatisticsService,
-                private title: Title) { }
+        private userStatisticsService: UserStatisticsService,
+        private title: Title) { }
 
     ngOnInit() {
         this.userId = +this.route.snapshot.params['id'];
@@ -25,7 +25,5 @@ export class UserComponent implements OnInit {
             this.user = usersStatistics.filter(user => +user['id'] === this.userId)[0];
             this.title.setTitle(this.user.firstName + ' ' + this.user.lastName);
         });
-        
-
     }
 }

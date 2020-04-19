@@ -12,7 +12,7 @@ export class UserStatisticsComponent implements OnInit {
     public userStatistics$ = this.userStatisticsService.USERSTATISTICS$;
 
     constructor(private userStatisticsService: UserStatisticsService,
-                private title: Title) { }
+        private title: Title) { }
 
     ngOnInit() {
         this.title.setTitle('User Statistics');

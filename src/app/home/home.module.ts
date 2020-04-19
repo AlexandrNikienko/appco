@@ -27,7 +27,7 @@ const homeRoutes: Routes = [
         RouterModule
     ],
     providers: [
-        
+
     ]
 })
 

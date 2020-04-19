@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -18,7 +18,7 @@ import { UserModule } from './user/user.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, {useHash: !Boolean(history.pushState)}),
+    RouterModule.forRoot(appRoutes, { useHash: !Boolean(history.pushState) }),
     FormsModule,
     HomeModule,
     UserStatisticsModule,
@@ -26,7 +26,7 @@ import { UserModule } from './user/user.module';
   ],
   exports: [
     RouterModule
-],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
