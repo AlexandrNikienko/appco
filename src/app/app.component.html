@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [class.header--home]="isHomePage">
   <div class="inner-wrapper">
     <a class="header__logo" routerLink="/">AppCo</a>
   </div>
@@ -6,7 +6,7 @@
 
 <router-outlet></router-outlet>
 
-<footer class="footer">
+<footer class="footer" [class.footer--home]="isHomePage">
   <div class="inner-wrapper">
     <div class="footer__logo">AppCo</div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 import { UserStatisticsService } from '../core/services/user-statistics.service';
 
@@ -10,9 +11,10 @@ import { UserStatisticsService } from '../core/services/user-statistics.service'
 export class UserStatisticsComponent implements OnInit {
     public userStatistics$ = this.userStatisticsService.USERSTATISTICS$;
 
-    constructor(private userStatisticsService: UserStatisticsService) { }
+    constructor(private userStatisticsService: UserStatisticsService,
+                private title: Title) { }
 
     ngOnInit() {
-        
+        this.title.setTitle('User Statistics');
     }
 }

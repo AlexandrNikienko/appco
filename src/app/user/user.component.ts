@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
         this.userId = +this.route.snapshot.params['id'];
         this.usersStatistics$.subscribe(usersStatistics => {
             this.user = usersStatistics.filter(user => +user['id'] === this.userId)[0];
-            //this.title.setTitle(this.user.firstName + ' ' + this.user.lastName);
+            this.title.setTitle(this.user.firstName + ' ' + this.user.lastName);
         });
         
 
