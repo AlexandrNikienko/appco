@@ -11,10 +11,11 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: $white;
-    background: url('#{$imageFolder}/Rectangle8.svg') no-repeat top center / cover;
+    background: url('#{$imageFolder}/hero-bg.png') no-repeat top center / 100% 583px;
 
-    @include desktopLarge {
-        background-size: 100%;
+    @include mobile {
+        background-size: cover;
+        background-position-x: -120px;
     }
 }
 
@@ -68,10 +69,13 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     @include mobile {
-        flex-direction: column;
         padding: 10px 0;
 
         &__rights,
@@ -107,5 +111,46 @@ body {
     &--light {
         background-color: $white;
         color: $themeColor;
+    }
+}
+
+.breadcrumbs {
+    padding: 1rem 0;
+    margin-bottom: .5rem;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1.25;
+        color: $themeColor;
+    }
+
+    &__list-item {
+        position: relative;
+        white-space: nowrap;
+        
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: .5rem;
+                height: .5rem;
+                border-right: 1px solid $lightGrey;
+                border-bottom: 1px solid $lightGrey;
+                transform: rotate(-45deg);
+                top: .25rem;
+                right: -1.5rem;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $lightGrey;
     }
 }

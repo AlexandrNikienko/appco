@@ -1,6 +1,15 @@
 <div class="inner-wrapper">
     <div class="user-statistics">
-        <div class="breadcrambs"></div>
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a class="breadcrumbs__link" routerLink="/">Main Page</a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    User statistics
+                </li>
+            </ul>
+        </div>
 
         <div class="page-title">Users statistics</div>
 
@@ -25,9 +34,9 @@
                         <td class="table__cell">{{user.lastName}}</td>
                         <td class="table__cell">{{user.email}}</td>
                         <td class="table__cell">{{user.gender}}</td>
-                        <td class="table__cell">{{user.totalClicks}}</td>
-                        <td class="table__cell">{{user.totalPageViews}}</td>
                         <td class="table__cell">{{user.ipAddress}}</td>
+                        <td class="table__cell">{{user.totalPageViews}}</td>
+                        <td class="table__cell">{{user.totalClicks}}</td>
                     </tr>
                 </tbody>
             </table>

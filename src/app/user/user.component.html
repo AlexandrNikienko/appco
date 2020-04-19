@@ -1,1 +1,19 @@
-user page
+<div class="inner-wrapper">
+    <div class="user-statistics">
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a class="breadcrumbs__link" routerLink="/">Main Page</a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a class="breadcrumbs__link" routerLink="/user-statistics">User statistics</a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    {{user.firstName}} {{user.lastName}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="page-title">{{user.firstName}} {{user.lastName}}</div>
+    </div>
+</div>

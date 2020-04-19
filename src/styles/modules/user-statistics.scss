@@ -1,14 +1,12 @@
 .table-wrapper {
     width: 100%;
     overflow: auto;
-    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
-    background-color: $white;
-    margin-bottom: 2rem;
 
     &__head {
         background-color: $themeColor;
@@ -16,9 +14,12 @@
 
     &__body {
         tr {
-            
             &:nth-child(even) {
                 background-color: $lightGreyAlt;
+            }
+
+            &:nth-child(odd) {
+                background-color: $white;
             }
 
             &:hover {
@@ -49,7 +50,7 @@
     }
 
     th {
-        padding: 14px 24px;
+        padding: 14px 18px;
         font-weight: normal;
         color: white;
         white-space: nowrap;

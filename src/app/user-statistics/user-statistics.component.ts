@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { UserStatisticsService } from '../core/services/user-statistics.service';
 
@@ -11,8 +10,7 @@ import { UserStatisticsService } from '../core/services/user-statistics.service'
 export class UserStatisticsComponent implements OnInit {
     public userStatistics$ = this.userStatisticsService.USERSTATISTICS$;
 
-    constructor(private userStatisticsService: UserStatisticsService,
-        private router: Router) { }
+    constructor(private userStatisticsService: UserStatisticsService) { }
 
     ngOnInit() {
         
