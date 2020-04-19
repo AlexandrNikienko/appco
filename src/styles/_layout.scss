@@ -105,6 +105,7 @@ body {
 
     @include mobile {
         padding: 10px 0;
+        flex-basis: auto;
 
         &__rights,
         &__logo,
@@ -125,6 +126,8 @@ body {
 }
 
 .btn {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
     height: 56px;
     width: 220px;
     background-color: $themeColor;

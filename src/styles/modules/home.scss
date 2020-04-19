@@ -57,7 +57,7 @@
     margin-bottom: 5.8rem;
 
     &__title {
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 1.1;
         color: $darkGrey;
         margin-bottom: 1.5rem;
@@ -284,5 +284,45 @@
                 font-size: 3.5rem;
             }
         }
+    }
+}
+
+.contact {
+    text-align: center;
+    margin-bottom: 1rem;
+
+    &__top {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        color: $grey;
+        margin-bottom: 4.625rem;
+    }
+
+    &__email {
+        color: $themeColor;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    &__form {
+        max-width: 579px;
+        width: 100%;
+        background: $white;
+        border: 1px solid $lightGreyAlt;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: auto;
+        display: flex;
+        padding: 2px;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        margin-right: 2px;
+        padding: 1rem;
+        font-size: 1rem;
+        align-items: center;
+        color: $grey;
+        border: none;
     }
 }
