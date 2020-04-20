@@ -14,7 +14,7 @@ export class UserStatisticsComponent implements OnInit {
     public data$ = this.userStatisticsService.DATA$;
     public data: object = {};
 
-    public pages: Number[] = [];
+    public pages: number[] = [];
     public totalPages: number;
     public totalItems: number;
     public currentPage: number = 1;
@@ -73,7 +73,7 @@ export class UserStatisticsComponent implements OnInit {
         const prodUrl = `http://159.65.233.178:8080/task/api/v1/users?page=${page}&range=10`;
 
         const testUrl = './assets/mocks/statistics-page5.json';
-        
+
         this.userStatistics$ = this.userStatisticsService.getUsers(testUrl)
     }
 }
