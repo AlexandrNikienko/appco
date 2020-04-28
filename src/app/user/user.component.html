@@ -14,6 +14,30 @@
             </ul>
         </div>
 
-        <div class="page-title">{{user.firstName}} {{user.lastName}}</div>
+		<div class="page-title">{{user.firstName}} {{user.lastName}}</div>
+		
+		<div class="chart" *ngIf="clicksChart as chart">
+			<p class="chart__title">{{chart.title}}</p>
+
+			<div class="chart__item-wrapper">
+				<google-chart #chart class="chart__item" 
+					[type]="chart.type"
+					[data]="chart.data"
+					[options]="chart.options">
+				</google-chart>
+			</div>
+		</div>
+
+		<div class="chart" *ngIf="viewsChart as chart">
+			<p class="chart__title">{{chart.title}}</p>
+
+			<div class="chart__item-wrapper">
+				<google-chart class="chart__item" 
+					[type]="chart.type" 
+					[data]="chart.data"
+					[options]="chart.options">
+			</google-chart>
+			</div>
+		</div>
     </div>
 </div>

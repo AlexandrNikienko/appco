@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+	production: false
 };
 
 /*
@@ -16,9 +16,13 @@ export const environment = {
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
 export const USERSTATISTICS = {
-  getItems: './assets/mocks/statistics.json'
+	getItems: './assets/mocks/statistics.json'
 };
 
 export const USERSTATISTICS_PAGE5 = {
-  getItems: './assets/mocks/statistics-page5.json'
+	getItems: './assets/mocks/statistics-page5.json'
+};
+
+export const USERSTATISTIC = {
+	getItems: './assets/mocks/user-statistic.json'
 };

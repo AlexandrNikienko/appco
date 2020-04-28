@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 import { UserComponent } from './user.component';
+
 
 const userRoutes: Routes = [
     {
@@ -22,7 +24,8 @@ const userRoutes: Routes = [
     imports: [
         RouterModule,
         CommonModule,
-        RouterModule.forChild(userRoutes)
+		RouterModule.forChild(userRoutes),
+		GoogleChartsModule
     ],
     exports: [
         RouterModule

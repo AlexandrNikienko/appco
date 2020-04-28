@@ -1,7 +1,7 @@
 .table-wrapper {
     width: 100%;
     overflow: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .table {
@@ -72,15 +72,23 @@
     }
 }
 
-//temporal copy/past from Bootstrap library
+.pagination-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+//copy/past from Bootstrap library
 .pagination {
     display: inline-block;
     padding-left: 0;
-    margin: 20px 0;
-    border-radius: 4px;
+    margin: 0 0 1.5rem;
+	border-radius: 4px;
 }
 .pagination > li {
     display: inline;
+}
+.pagination > li > a {
+	cursor: pointer;
 }
 .pagination > li > a,
 .pagination > li > span {

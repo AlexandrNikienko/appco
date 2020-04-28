@@ -4,26 +4,27 @@ import { map, tap } from 'rxjs/operators';
 
 import { USERSTATISTICS } from '../../../environments/environment';
 import { USERSTATISTICS_PAGE5 } from '../../../environments/environment';
-import { UserStatistic } from '../models/userstatistic.model';
+import { UserStatistics } from '../models/userstatistic.model';
+
+import { USERSTATISTIC } from '../../../environments/environment';
+
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserStatisticsService {
-  USERSTATISTICS$ = this.getUsers(USERSTATISTICS.getItems);
-  USERSTATISTICS_PAGE5$ = this.getUsers(USERSTATISTICS_PAGE5.getItems);
+	USERSTATISTICS$ = this.getUsers(USERSTATISTICS.getItems);
+	USERSTATISTICS_PAGE5$ = this.getUsers(USERSTATISTICS_PAGE5.getItems);
 
-  DATA$ = this.http.get<any[]>(USERSTATISTICS.getItems);
+	USERSTATISTIC$ = this.http.get<any[]>(USERSTATISTIC.getItems);
 
-  constructor(private http: HttpClient) {
-  }
+	DATA$ = this.http.get<any[]>(USERSTATISTICS.getItems);
 
-  getKey(key: string): any {
-    return this[key]
-  }
+	constructor(private http: HttpClient) {
+	}
 
-  getUsers(url: string): Observable<UserStatistic[]> {
-    return this.http.get<any[]>(url).pipe(
-      map(obj => this.getKey.call(obj, 'content'))
-    );
-  }
+	getUsers(url: string): Observable<UserStatistics[]> {
+		return this.http.get<any[]>(url).pipe(
+			map(obj => obj['content'])
+		);
+	}
 }

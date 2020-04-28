@@ -1,0 +1,19 @@
+.chart {
+	margin-bottom: 2rem;
+
+	&__title {
+		font-weight: bold;
+		font-size: 1.5rem;
+		line-height: 1.8;
+		color: $darkGrey;
+		margin-bottom: 1.5rem;
+	}
+
+	&__item-wrapper {
+		overflow: auto;
+	}
+
+	&__item {
+		width: 100% !important;
+	}
+}

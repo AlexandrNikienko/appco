@@ -1,4 +1,4 @@
-export interface UserStatistic {
+export interface UserStatistics {
     id: string;
     firstName: string;
     lastName: string;

@@ -70,10 +70,9 @@ export class UserStatisticsComponent implements OnInit {
         }
 
         //:TODO request to prodUrl;
-        const prodUrl = `http://159.65.233.178:8080/task/api/v1/users?page=${page}&range=10`;
+        const prodUrl = `http://159.65.233.178:8080/task/api/v1/users?page=${page}&range=${this.pageSize}`;
 
         const testUrl = './assets/mocks/statistics-page5.json';
-
-        this.userStatistics$ = this.userStatisticsService.getUsers(testUrl)
+        this.userStatistics$ = this.userStatisticsService.getUsers(testUrl);
     }
 }
