@@ -47,12 +47,14 @@ export class UserComponent implements OnInit {
 		});
 
 		this.usersStatistic$.subscribe(statistic => {
-			const clicks = statistic.map(obj => {				
-				return [this.monthNames[new Date(obj['date']).getMonth()] + ' ' + new Date(obj['date']).getDate(), obj['clicks']];
+			const clicks = statistic.map(obj => {	
+				const date = this.getUsefulDateString(obj['date']);
+				return [this.monthNames[new Date(date).getMonth()] + ' ' + new Date(date).getDate(), obj['clicks']];
 			});
 
-			const views = statistic.map(obj => {				
-				return [this.monthNames[new Date(obj['date']).getMonth()] + ' ' + new Date(obj['date']).getDate(), obj['page_views']];
+			const views = statistic.map(obj => {	
+				const date = this.getUsefulDateString(obj['date']);			
+				return [this.monthNames[new Date(date).getMonth()] + ' ' + new Date(date).getDate(), obj['page_views']];
 			});
 
 			this.clicksChart = {
@@ -67,5 +69,9 @@ export class UserComponent implements OnInit {
 				data: views
 			};
 		})
+	}
+
+	getUsefulDateString(date: string): string {
+		return date.slice(0, 10).replace(/-/g, "/");
 	}
 }
